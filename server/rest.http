@@ -1,0 +1,23 @@
+###
+GET http://localhost:8085/api/user?username=asdf&password=asdf
+
+//authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjYwOGU5NjMxODk1OWVmMTExMGZmOTMwMyIsImlhdCI6MTYyMDE5MjM0NiwiZXhwIjoxNjIwMjAyNDI2fQ.-hJcW9TO2oi_JvEolPtZ_uZAMwzIt7t71g1srKZsvbg
+
+###
+POST http://localhost:8085/api/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjI4MTczMjAsImV4cCI6MTYyMjgyNzQwMCwiYXVkIjoie1wiSWRcIjpcIjYwYjlhMmE4MTk4MmY4MGNiODY3NzA5NlwifSIsImlzcyI6Im5vdHJlYWNoYWJsZS5jb20ifQ.UIQhyVsuyrxZ13kJcYJYKPcZDjwhiaNNFywlkFbbr0I"
+}
+
+###
+POST http://localhost:8085/api/user
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "test",
+    "email": "test",
+    "avatar": ""
+}
